@@ -1,0 +1,21 @@
+// For Ad-Blocking/Blacklisting/Whitelisting
+response-policy {
+	zone "whitelist.<YOUR_LOCAL_DOMAIN>" policy passthru;
+	zone "blacklist.<YOUR_LOCAL_DOMAIN>";
+};	
+
+zone "blacklist.<YOUR_LOCAL_DOMAIN>" {
+	type master;
+	file "/etc/bind/db.rpz.blacklist";
+	allow-update { none; };
+	allow-transfer { none; };
+	allow-query { localhost; };
+};
+
+zone "whitelist.<YOUR_LOCAL_DOMAIN>" {
+	type master;
+	file "/etc/bind/db.rpz.whitelist";
+	allow-update { none; };
+	allow-transfer { none; };
+	allow-query { localhost; };
+};
