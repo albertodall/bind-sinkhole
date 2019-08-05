@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PIXELSERV_IP="192.168.10.2"
+PIXELSERV_IP="<YOUR_PIXELSERV_IP_ADDRESS>"
 
 echo -e "This script will download and update domains into the DNS blacklist zone."
 sleep 0.1
@@ -45,7 +45,7 @@ curl -# "http://sysctl.org/cameleon/hosts" \
 	| sed 1,2d \
 	| awk NF \
 	| sed 's/127.0.0.1\t //g' \
-	| sed 's/$/ IN A 192.168.10.2/g' > /tmp/cameleon.list
+	| sed 's/$/ IN A ${PIXELSERV_IP}/g' > /tmp/cameleon.list
 
 echo "Downloading Disconnect.me tracking list..."
 curl -# "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt " \
