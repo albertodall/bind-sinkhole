@@ -1,2 +1,2 @@
-@ 60 IN SOA @ hostmaster.gothamcity.lan. 2019032308 3H 1H 1W 1H
-@ 60 IN NS penguin.gothamcity.lan.
+@ 60 IN SOA @ hostmaster.<YOUR_LOCAL_DOMAIN>. 2019032308 3H 1H 1W 1H
+@ 60 IN NS <YOUR_BIND_SERVER_NAME_FQDN>.
