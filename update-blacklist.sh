@@ -45,7 +45,7 @@ curl -# "http://sysctl.org/cameleon/hosts" \
 	| sed 1,2d \
 	| awk NF \
 	| sed 's/127.0.0.1\t //g' \
-	| sed 's/$/ IN A ${PIXELSERV_IP}/g' > /tmp/cameleon.list
+	| sed "s/\$/ IN A ${PIXELSERV_IP}/g" > /tmp/cameleon.list
 
 echo "Downloading Disconnect.me tracking list..."
 curl -# "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt " \
