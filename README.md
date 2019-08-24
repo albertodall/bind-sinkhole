@@ -1,7 +1,7 @@
-# bind-sinkhole
+# bind9 Sinkhole
 Script to automate configuration and management of a bind-based sinkhole that blocks ads and malware sites.
 
-## List sources
+## Blacklists
 http://pgl.yoyo.org/adservers/serverlist.php  
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts  
 http://mirror1.malwaredomains.com/files/spywaredomains.zones  
@@ -11,6 +11,9 @@ https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
 https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt  
 https://hosts-file.net/ad_servers.txt  
 https://jasonhill.co.uk/pfsense/ytadblock.txt
+
+## Whitelists
+https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt  
 
 ## How to use
 Documentation and instructions included in the [Wiki](https://github.com/albertodall/bind-sinkhole/wiki)
