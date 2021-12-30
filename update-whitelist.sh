@@ -24,7 +24,7 @@ echo "Updating zone serial..."
 awk '{ if ( $0 ~ /[\t ]SOA[\t ]/ ) $7=$7+1; print}' /usr/local/bin/whitelist-zone.header > /usr/local/bin/whitelist-zone.header.new
 mv /usr/local/bin/whitelist-zone.header.new /usr/local/bin/whitelist-zone.header
 cp /usr/local/bin/whitelist-zone.header /etc/bind/db.rpz.whitelist
-cat /tmp/updated.list | tee -a /etc/bind/db.rpz.whitelist > /dev/null
+cat /tmp/updated.list | tee -a /etc/bind/zones/db.rpz.whitelist > /dev/null
 
 echo "Echo checking if bind9 configuration has been broken..."
 named-checkconf
